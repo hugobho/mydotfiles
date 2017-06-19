@@ -1,0 +1,75 @@
+set rtp+=~/.config/vim
+set shell=bash
+so ~/.config/vim/plugins.vim
+so ~/.config/vim/shortcuts.vim
+
+
+" Tab indenting
+set tabstop=2
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+set ai " Autoindent
+
+" Color scheme
+colorscheme flattened_light
+
+" Searching
+set incsearch
+set hlsearch
+
+" Editing
+nnoremap S diw"0P " stamp text
+
+" Appearance
+if has("gui_running")
+  set guioptions=egmrt        "Disable menu bar for gvim/macvim
+end
+set laststatus=2     " Always show the statusline
+set number           " Show line numbers
+set title            " Display filename in title bar
+set cursorline       " Adds highlighted line on current line
+set cursorcolumn     " Adds highlighted line on current column
+set scrolloff=20     " set minimum space between the cursor and window
+set ttyfast          " Faster scrolling
+set guioptions-=r    " remove right scrollbar
+set guioptions-=R    " remove right scrollbar
+set guioptions-=l    " remove right scrollbar
+set guioptions-=L    " remove right scrollbar
+
+
+
+" Misc
+set nobackup          " Don't create backup files
+set nowritebackup     " Don't create backup files
+set noswapfile        " No .swp files
+set spelllang=en_us   " Set spell check language
+set nowrap            " Disable line wrapping
+set autoread          " Read changes on a file when it is changed
+set clipboard=unnamed " Make vim share clipboard with system
+
+" Ag start search from project root
+" let g:ag_working_path_mode="r"
+
+" Only display cursorline on active pane
+" From: http://stackoverflow.com/questions/12017331/how-can-i-make-vim-highlight-the-current-line-on-only-the-active-buffer
+augroup CursorLine
+au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+  au WinLeave * setlocal nocursorline nocursorcolumn
+augroup END
+
+
+" Vim fugitive
+set diffopt+=vertical
+
+" String whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+set autowriteall
+
+" Enter normal mode on file save.
+if has("gui_running")
+  iunmenu File.Save
+  imenu <silent> File.Save <Esc>:%s/\s\+$//e<CR>:noh<CR>:w<CR>
+  nmenu <silent> File.Save <Esc>:%s/\s\+$//e<CR>:noh<CR>:w<CR>
+endif

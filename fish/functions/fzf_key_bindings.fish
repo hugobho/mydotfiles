@@ -1,0 +1,1 @@
+/Users/hugoho/.fzf/shell/key-bindings.fish
