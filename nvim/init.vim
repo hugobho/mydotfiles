@@ -47,6 +47,7 @@ set guioptions-=r    " remove right scrollbar
 set guioptions-=R    " remove right scrollbar
 set guioptions-=l    " remove right scrollbar
 set guioptions-=L    " remove right scrollbar
+set guicursor=a:blinkon300-blinkoff250
 
 " This line enables the true colour support.
 set termguicolors
@@ -123,6 +124,11 @@ nmap <leader>L :call Resize('l', 10, '>', '<')<CR>
 nmap <leader>J :call Resize('j', 10, '+', '-')<CR>
 nmap <leader>K :call Resize('j', 10, '-', '+')<CR>
 
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ea <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ea <Plug>(EasyAlign)
 
 " ------------- GIT ---------------
 
@@ -172,6 +178,7 @@ nmap tt :vs<CR>:term<CR>
 so ~/.config/nvim/plugin/airline.vim
 call plug#begin()
 
+" Plug 'kien/ctrlp.vim'
 Plug 'Shougo/neocomplete.vim'
 Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
@@ -183,12 +190,13 @@ Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
 Plug 'gkz/vim-ls'
 Plug 'hashivim/vim-terraform'
-" Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/vim-easy-align'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
+Plug 'romainl/flattened'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -197,6 +205,5 @@ Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wavded/vim-stylus'
-Plug 'romainl/flattened'
 
 call plug#end()

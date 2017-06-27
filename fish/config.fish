@@ -59,6 +59,10 @@ alias blender "~/../../Applications/Blender/blender.app/Contents/MacOS/blender"
 ## printf '\n%s%s%s%s > ' $__fish_prompt_cwd (prompt_pwd) $__fish_prompt_normal $__git_cb
 ## end
 
+function .....
+ cd ../../../..
+end
+
 function ....
  cd ../../..
 end
