@@ -169,7 +169,10 @@ autocmd BufWritePre * :%s/\s\+$//e
 " Map <Esc> to exit terminal mode
 tnoremap <Esc> <C-\><C-n>
 
+" Open new Terminal vertically
 nmap tt :vs<CR>:term<CR>
+" Open new Terminal horizontally
+nmap th :sp<CR>:term<CR>
 
 
 
@@ -188,6 +191,7 @@ Plug 'alvan/vim-closetag'
 Plug 'digitaltoad/vim-pug'
 Plug 'elzr/vim-json'
 Plug 'ervandew/supertab'
+Plug 'fatih/vim-go'
 Plug 'gkz/vim-ls'
 Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }

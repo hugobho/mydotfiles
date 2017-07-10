@@ -1,4 +1,5 @@
-set -x PATH ./bin ./node_modules/.bin  ~/.config/bin $PATH
+set -x GOPATH ~/go $GOPATH
+set -x PATH ./bin ./node_modules/.bin $GOPATH/bin $PATH
 set -x MYVIMRC ~/.config/.vimrc $MYVIMRC
 
 
