@@ -10,11 +10,12 @@ abbr -a m mvim .
 abbr -a v nvim .
 
 
-abbr -a gp git push
-abbr -a gs git sync
+abbr -a gp  git push
+abbr -a gs  git sync
+abbr -a gst git status
 abbr -a gpf git push --force
 abbr -a gpr git new-pull-request
-abbr -a co git checkout
+abbr -a co  git checkout
 
 function gac
  git add -A

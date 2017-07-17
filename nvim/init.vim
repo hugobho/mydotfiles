@@ -54,11 +54,6 @@ set termguicolors
 
 " ----------- MAPPINGS -------------
 
-" NERDTree
-map <silent> <leader>t :NERDTreeToggle<CR>
-let g:NERDTreeMapOpenSplit="s"
-let g:NERDTreeMapOpenVSplit="v"
-
 " Remove highlight after search
 map <silent> <leader>/ :noh<CR>
 
@@ -124,11 +119,22 @@ nmap <leader>L :call Resize('l', 10, '>', '<')<CR>
 nmap <leader>J :call Resize('j', 10, '+', '-')<CR>
 nmap <leader>K :call Resize('j', 10, '-', '+')<CR>
 
+
+" ----------- PLUGINS -------------
+
+" NERDTree
+map <silent> <leader>t :NERDTreeToggle<CR>
+let g:NERDTreeMapOpenSplit="s"
+let g:NERDTreeMapOpenVSplit="v"
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ea <Plug>(EasyAlign)
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ea <Plug>(EasyAlign)
+
+" Disable :GoDef 'gd' mapping
+let g:go_def_mapping_enabled = 0
 
 " ------------- GIT ---------------
 
