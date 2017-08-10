@@ -11,6 +11,7 @@ abbr -a v nvim .
 
 
 abbr -a gp  git push
+abbr -a gd  git diff
 abbr -a gs  git sync
 abbr -a gst git status
 abbr -a gpf git push --force

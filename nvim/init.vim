@@ -133,8 +133,11 @@ xmap ea <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ea <Plug>(EasyAlign)
 
+" Vim Go
 " Disable :GoDef 'gd' mapping
 let g:go_def_mapping_enabled = 0
+" run goimports on save
+let g:go_fmt_command = "goimports"
 
 " ------------- GIT ---------------
 
