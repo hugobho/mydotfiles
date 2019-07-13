@@ -1,5 +1,3 @@
-// This is the canonical layout file for the Quantum project. If you want to add another keyboard,
-// this is the style you want to emulate.
 
 #include "kc60.h"
 
@@ -61,7 +59,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |-----------------------------------------------------------------------------------------+
  * |         |     |     |     |     |     |     | Psc |     |     |     |     |             |
  * |-----------------------------------------------------------------------------------------+
- * |           | Led | Led-| Led+|     | Mute| Vol+| Vol-|     |     |     |    Play   |     |
+ * |           | Led | Led+| Led-|     | Mute| Vol+| Vol-|     |     |     |    Play   |     |
  * |-----------------------------------------------------------------------------------------+
  * |       |       |       |                                 |       | Prev  | Stop  | Next  |
  * `-----------------------------------------------------------------------------------------'

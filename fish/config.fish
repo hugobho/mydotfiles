@@ -1,5 +1,5 @@
 set -x GOPATH ~/go $GOPATH
-set -x PATH ./bin ./node_modules/.bin $GOPATH/bin $PATH
+set -x PATH ./bin ./node_modules/.bin $GOPATH/bin  $PATH
 set -x MYVIMRC ~/.config/.vimrc $MYVIMRC
 
 
@@ -9,14 +9,16 @@ abbr -a g gitX .
 abbr -a m mvim .
 abbr -a v nvim .
 
-
 abbr -a gp  git push
 abbr -a gd  git diff
 abbr -a gs  git sync
 abbr -a gst git status
-abbr -a gpf git push --force
 abbr -a gpr git new-pull-request
-abbr -a co  git checkout
+abbr -a gc git town config
+
+if test -f /usr/local/share/chtf/chtf.fish
+    source /usr/local/share/chtf/chtf.fish
+end
 
 function gac
  git add -A
@@ -175,3 +177,5 @@ function fish_prompt --description 'Write out the prompt'
     echo -n -s $normal (basename $PWD) $__git_cb $prompt_status; set_color brred; echo " ¥(x_x)¥ "
   end
 end
+
+set -g fish_user_paths "/usr/local/opt/mysql@5.5/bin" $fish_user_paths

@@ -8,6 +8,7 @@ set expandtab
 set shiftwidth=2
 set softtabstop=2
 set ai " Autoindent
+set mouse=a
 
 " Color scheme
 colorscheme flattened_light
@@ -83,10 +84,10 @@ xnoremap P "_dP
 map <leader>l 0dwi<backspace> <ESC>
 
 " Replaces word with last yanked word
-nmap <leader>r viw"0p
+nmap <leader>r viw"0P
 
 " Pastes last word yanked
-nmap <leader>p "0p
+nmap <leader>p "0P
 
 " Window management
 nmap <silent> <C-h> :wincmd h<CR>
@@ -172,6 +173,19 @@ autocmd VimLeave * set guicursor=a:hor100-blinkwait200-blinkon400-blinkoff250
 " Strip whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+autocmd BufWritePost *.js call AutoFormatJS()
+
+fun! AutoFormatJS()
+  call system('eslint --fix ' . @%)
+  edit
+endfun
+
+autocmd BufWritePost *.jsx call PrettifyJSX()
+
+fun! PrettifyJSX()
+  call system('prettier --write ' . @%)
+  edit
+endfun
 
 " ----------- TERMINAL -------------
 
@@ -192,9 +206,8 @@ call plug#begin()
 
 " Plug 'kien/ctrlp.vim'
 Plug 'Shougo/neocomplete.vim'
-Plug 'Valloric/MatchTagAlways'
+" Plug 'Valloric/MatchTagAlways'
 Plug 'airblade/vim-gitgutter'
-Plug 'alexdavid/nerdtree_icons'
 Plug 'alexdavid/vim-min-git-status'
 Plug 'alvan/vim-closetag'
 Plug 'digitaltoad/vim-pug'
@@ -205,11 +218,13 @@ Plug 'gkz/vim-ls'
 Plug 'hashivim/vim-terraform'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/vim-easy-align'
+Plug 'leafgarland/typescript-vim'
 Plug 'mxw/vim-jsx'
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rking/ag.vim'
 Plug 'romainl/flattened'
+Plug 'scrooloose/nerdtree'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'

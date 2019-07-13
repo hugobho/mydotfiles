@@ -32,5 +32,5 @@ SET fish_pager_color_completion:normal
 SET fish_pager_color_description:555\x1eyellow
 SET fish_pager_color_prefix:cyan
 SET fish_pager_color_progress:cyan
-SET fish_user_abbreviations:s\x20subl\x20\x2e\x1ea\x20atom\x20\x2e\x1eblender\x20/Applications/blender\x2eapp/Contents/MacOS/blender\x1eg\x20gitX\x20\x2e\x1egp\x20git\x20push\x1egpf\x20git\x20push\x20\x2d\x2dforce\x1egpr\x20git\x20new\x2dpull\x2drequest\x1eco\x20git\x20checkout\x1egs\x20git\x20sync\x1em\x20mvim\x20\x2e\x1ev\x20nvim\x20\x2e\x1egst\x20git\x20status\x1egd\x20git\x20diff
+SET fish_user_abbreviations:s\x20subl\x20\x2e\x1ea\x20atom\x20\x2e\x1eblender\x20/Applications/blender\x2eapp/Contents/MacOS/blender\x1eg\x20gitX\x20\x2e\x1egp\x20git\x20push\x1egpf\x20git\x20push\x20\x2d\x2dforce\x1egpr\x20git\x20new\x2dpull\x2drequest\x1eco\x20git\x20checkout\x1egs\x20git\x20sync\x1em\x20mvim\x20\x2e\x1ev\x20nvim\x20\x2e\x1egst\x20git\x20status\x1egd\x20git\x20diff\x1econ\x20git\x20town\x20checkout\x1egcon\x20git\x20town\x20config\x1egc\x20git\x20town\x20config
 SET fish_user_paths:/Users/hugoho/\x2eyarn/bin\x1e/Users/hugoho/\x2eyarn/bin\x1e/Users/hugoho/\x2eyarn/bin\x1e/Users/hugoho/\x2efzf/bin
